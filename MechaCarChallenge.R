@@ -25,5 +25,28 @@ total_summary <- coil_data %>% summarize(Mean=mean(PSI),Median=median(PSI),Varia
 #of the suspension coil’s PSI column
 lot_summary <- coil_data %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI), .groups = 'keep')
 
+#DELIVERABLE 3:
+#write an RScript using the t.test() function to determine if the PSI across all manufacturing
+#lots is statistically different from the population mean of 1,500 pounds per square inch
 
+#create sample dataset with 75 data points
+sample_set <- coil_data %>% sample_n(75)
 
+#compare the sample data to the full population
+t.test (sample_set$PSI,mu=mean(coil_data$PSI))
+
+#write three more RScripts in your MechaCarChallenge.RScript using the t.test() function 
+#and its subset() argument to determine if the PSI for each manufacturing lot
+#is statistically different from the population mean of 1,500 pounds per square inch
+
+#manufacturing lot 1: 25 sample data points compared to population
+lot_1_psi_sample <- coil_data %>% subset(Manufacturing_Lot == 'Lot1') %>% sample_n(25)
+t.test (lot_1_psi_sample$PSI,mu=mean(coil_data$PSI))
+
+#manufacturing lot 2: 25 sample data points compared to population
+lot_2_psi_sample <- coil_data %>% subset(Manufacturing_Lot == 'Lot2') %>% sample_n(25)
+t.test (lot_2_psi_sample$PSI,mu=mean(coil_data$PSI))
+
+#manufacturing lot 3: 25 sample data points compared to population
+lot_3_psi_sample <- coil_data %>% subset(Manufacturing_Lot == 'Lot3') %>% sample_n(25)
+t.test (lot_3_psi_sample$PSI,mu=mean(coil_data$PSI))
