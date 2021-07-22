@@ -8,9 +8,9 @@ This project uses R to perform statistical analysis on automobile production dat
 ![Image1_mpg_regression_analysis.PNG]( https://github.com/degitaccount/MechaCar_Statistical_Analysis/blob/main/Images/Image1_mpg_regression_analysis.PNG)
 In the linear regression summary, the Pr(>|t|) represents the p-value of each t-test.  The asterisks highlight how likely the relationship between the y variable and the coefficients is due to chance - lower values indicate that the relationship is unlikely due to chance.  The results of the regression model suggest that the intercept, vehicle length and ground clearance provide a non-random amount of variance to the mpg values
 
-{INSERT COMMENTS ABOUT THE SLOPE}
+The p-value of the linear regression is 5.35 x 10-11, which is much smaller than our assumed significance level of 0.05%. Therefore, we can state that there is sufficient evidence to reject our null hypothesis, which means that the slope of our linear model is not zero
 
-An r-squared value of approximately 0.71 suggests changes in the vehicle length, vehicle weight, spoiler angel and ground clearance explain 71% of mpg variations.  We can conclude that the liner regression model is effective at predicting mpg for prototypes.
+An r-squared value of approximately 0.71 suggests changes in the vehicle length, vehicle weight, spoiler angel and ground clearance explain 71% of mpg variations.  We can conclude that the liner regression model is fairly effective at predicting mpg for prototypes.
 
 ## Summary Statistics on Suspension Coils
 
